@@ -22,6 +22,16 @@ Edit the `bluetooth_adress = "XX:XX:XX:XX:XX:XX"` line and set it up with yours.
 
 ![image](https://github.com/Arthurdufinister/led-strip-controller/assets/95881999/2a390204-20d2-4873-b2b1-ce6459319b41)
 
+## Mouse and keyboard support
+
+You will need openrgb for it to work. Then type `openrgb -l` to list your keyboard / mouse. 
+
+![image](https://github.com/Arthurdufinister/led-strip-controller/assets/95881999/f5f4fc80-b2bf-4e0d-bb6d-bd17ecfd5697)
+![image](https://github.com/Arthurdufinister/led-strip-controller/assets/95881999/02bf34af-1889-473c-b988-1be06b83247f)
+
+Now that you have your peripherics listed, you can change the code if needed, I use `openrgb -d 0` to select my keyboard which is 0 in the list.
+
+
 ## Start
 
 Go into the directory where the python file is located and open a terminal.
@@ -37,4 +47,4 @@ You can customize the style of the window being opened from editing lines 6 and 
 set_appearance_mode("System")
  
 # Supported themes : green, dark-blue, blue
-set_default_color_theme("green")  ```
+set_default_color_theme("green")```

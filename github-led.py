@@ -54,6 +54,8 @@ def change_brightness(value):
     brightness_text.configure(text="Brightness : "+str(value))
     system(base_command + set_brightness.format(brightness=value))
 
+system("rfkill unblock bluetooth")
+
 root = CTk()
 root.title('Led Remote')
 CTkButton(master=root, text="Power On", text_color="black", command=lambda: system(base_command+power_on)).pack(padx=30, pady=5)
@@ -67,6 +69,6 @@ CTkSlider(master=root, command=change_brightness, from_=1, to=99, number_of_step
 
 CTkButton(master=root, text="Keyboard & Mouse", text_color="black", command=choose_color3).pack(padx=30, pady=5)
 CTkButton(master=root, text="All colors", text_color="black", command=choose_color2).pack(padx=30, pady=5)
-
+system("rfkill block bluetooth")
 
 root.mainloop()
